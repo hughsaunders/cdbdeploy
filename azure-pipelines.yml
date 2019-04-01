@@ -15,3 +15,15 @@ steps:
 
 - powershell: |
     ./deploy.ps1
+
+# Archival tasks should always run, regardless of prior failure.
+- powershell: |
+    mkdir logs
+    cp C:\ProgramData\chocolatey\logs\chocolatey.log logs
+  condition: always()
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'logs'
+    targetPath: 'logs'
+  condition: always()
