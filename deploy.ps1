@@ -1,0 +1,1 @@
+echo "I'm a powershell script and I'm alive"
