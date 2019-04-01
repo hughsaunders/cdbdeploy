@@ -1,2 +1,2 @@
 # cdbdeploy
-Deploy Scripts for the CYE DB
+Deploy Scripts for the CYE DB.
