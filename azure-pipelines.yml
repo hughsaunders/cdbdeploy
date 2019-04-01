@@ -12,4 +12,6 @@ pool:
 steps:
 - checkout: self
   persistCredentials: true
-- script: ./deploy.ps1
+
+- powershell: |
+    ./deploy.ps1
