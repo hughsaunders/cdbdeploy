@@ -20,6 +20,7 @@ steps:
 - powershell: |
     mkdir logs
     cp C:\ProgramData\chocolatey\logs\chocolatey.log logs
+    cp "C:\Program Files\Microsoft SQL Server\*\Setup Bootstrap\Log\*" logs
   condition: always()
 
 - task: PublishPipelineArtifact@0
